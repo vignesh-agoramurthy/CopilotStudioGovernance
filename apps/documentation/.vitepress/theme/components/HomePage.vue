@@ -7,26 +7,26 @@
     </div>
 
     <div class="sections-grid">
-      <div class="section-card">
+      <a href="/CopilotStudioGovernance/recruit/" class="section-card">
         <span class="section-icon">🎓</span>
         <h3>Agent Academy</h3>
         <p>Start your journey with our comprehensive training program. Learn the fundamentals of building AI agents from scratch with 13 hands-on modules designed to take you from beginner to agent maker.</p>
-        <a href="/CopilotStudioGovernance/recruit/" class="section-link">Explore Academy →</a>
-      </div>
+        <span class="section-link">Explore Academy →</span>
+      </a>
 
-      <div class="section-card">
+      <a href="/CopilotStudioGovernance/best-practices/" class="section-card">
         <span class="section-icon">⭐</span>
         <h3>Best Practices</h3>
         <p>Discover industry best practices, proven patterns, and expert recommendations for building efficient, secure, and scalable AI agents.</p>
-        <a href="/CopilotStudioGovernance/best-practices/" class="section-link">View Best Practices →</a>
-      </div>
+        <span class="section-link">View Best Practices →</span>
+      </a>
 
-      <div class="section-card">
+      <a href="/CopilotStudioGovernance/observability/" class="section-card">
         <span class="section-icon">📊</span>
         <h3>Observability</h3>
         <p>Monitor, analyze, and optimize your agents with comprehensive observability tools and guidance.</p>
-        <a href="/CopilotStudioGovernance/observability/" class="section-link">Explore Observability →</a>
-      </div>
+        <span class="section-link">Explore Observability →</span>
+      </a>
     </div>
 
     <div class="footer-section">
@@ -114,14 +114,17 @@
 }
 
 .section-card {
+  display: block;
   padding: 2.5rem;
   border: 1px solid var(--vp-c-divider, #d1d5db);
   border-radius: 12px;
-  background: var(--vp-c-bg-soft, #f8fafc);
+  background: var(--vp-c-bg-soft, var(--vp-c-bg, #f8fafc));
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
 }
 
 .section-card::before {
@@ -140,7 +143,12 @@
   border-color: var(--vp-c-primary, #0078d4);
   box-shadow: 0 12px 32px rgba(0, 120, 212, 0.2);
   transform: translateY(-6px);
-  background: var(--vp-c-surface, #ffffff);
+  background: var(--vp-c-bg-soft, var(--vp-c-bg, #f8fafc));
+}
+
+.section-card:focus-visible {
+  outline: 2px solid var(--vp-c-primary, #0078d4);
+  outline-offset: 4px;
 }
 
 .section-card:hover::before {
@@ -174,14 +182,13 @@
   color: var(--vp-c-primary, #0078d4);
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.2s;
+  transition: color 0.2s;
   font-size: 0.9rem;
   letter-spacing: 0.2px;
 }
 
-.section-link:hover {
+.section-card:hover .section-link {
   color: var(--vp-c-primary-dark, #106ebe);
-  transform: translateX(4px);
 }
 
 /* Footer Section */
