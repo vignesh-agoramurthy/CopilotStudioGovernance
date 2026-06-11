@@ -1,16 +1,16 @@
-import { defineConfig } from "vitepress";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { mermaidPlugin } from "./plugins/vitepress-mermaid";
-import { missionsPlugin } from "./plugins/missions";
+import { defineConfig } from "vitepress";
 import { downloadFilesPlugin } from "./plugins/download-files";
+import { missionsPlugin } from "./plugins/missions";
+import { mermaidPlugin } from "./plugins/vitepress-mermaid";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const docsDir = path.resolve(__dirname, "..");
 
 export default defineConfig({
   title: "Agent Academy",
-  base: "/copilot-studio/",
+  base: "/CopilotStudioGovernance/",
   cleanUrls: true,
   head: [
     ["link", { rel: "icon", href: "/logo.png" }],
@@ -57,7 +57,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/Woodside/copilot-studio/",
+        link: "https://github.com/Woodside/CopilotStudioGovernance/",
       },
     ],
   },
