@@ -2,32 +2,37 @@
 lastUpdated: false
 ---
 
-# Copilot Studio Agent Academy
+# Copilot Studio Enablement
 
-**Welcome to Copilot Studio Agent Academy.**  
+**Welcome to Copilot Studio Enablement.**
 
-Agent Academy is your starting point for learning how to build with Microsoft Copilot Studio or get more done with AI agents like Copilot Cowork. It is based on a free, open-source training program developed by Microsoft, adapted here for Woodside. 
+Comprehensive resources for learning, building, optimizing, and managing intelligent AI agents with Microsoft Copilot Studio.
 
-This training is designed at "Recruit" level. The curriculum assumes you're starting from zero, taking you from logging into building agents that can transform your personal and team productivity. 
+## 🎓 [Agent Academy](/recruit/)
 
-You will need to complete all the labs in this training program and then follow the instructions in the last section to prove completion. You must complete this training and the proof of completion within 30 days in order to retain access to your Woodside Copilot Studio developer environment.
+Start your journey with our comprehensive "Recruit" level training program. Learn the fundamentals of building AI agents from scratch with 13 hands-on modules designed to take you from beginner to agent maker.
 
+**Get Started**: [Explore Agent Academy →](/recruit/)
 
-## ⚠️ Before You Begin {#before-you-begin}
+---
 
-### Progressive Difficulty
+## ⭐ [Best Practices](/best-practices/)
 
-This training is designed to **increase in difficulty** as you progress. Each module builds on the last, introducing more advanced skills. This "Recruit" level takes you from beginner to agent maker, suitable for business users without any technical background or coding skills. Everything you learn here can be done with natural language or drag and drop. 
+Discover industry best practices, proven patterns, and expert recommendations for building efficient, secure, and scalable AI agents.
 
+**Explore**: [View Best Practices →](/best-practices/)
 
-## 📜 Code of Conduct {#code-of-conduct}
+---
+
+## 📊 [Observability](/observability/)
+
+Monitor, analyze, and optimize your agents with comprehensive observability tools and guidance.
+
+**Learn More**: [Explore Observability →](/observability/)
+
+---
+
+## 📜 Code of Conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-
-> [!NOTE] Resources:
->
-> - [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
-> - [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
-> - Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with questions or concerns
-
 
