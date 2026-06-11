@@ -39,7 +39,35 @@ jobs:
           echo "names=$names" >> $GITHUB_OUTPUT
         env:
           NAMES: ${{ toJson(fromJson(steps.get_env.outputs.data).environments.*.name) }}
+  check:
+    name: CI
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
+
+      - name: Install Node.js
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
+        with:
+          node-version: 24
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Spell Check
+        uses: streetsidesoftware/cspell-action@9cd41bb518a24fefdafd9880cbab8f0ceba04d28 # v8.3.0
+        with:
+          files: 'apps/documentation/**/*.md'
+          incremental_files_only: false
+          suggestions: true
+
+      - name: Build
+        run: pnpm run build:docs
   deploy:
     # If there are no documentation environment to deploy to, this job will be skipped
     if: ${{ needs.get-environments.outputs.names != '[]'}}
@@ -50,6 +78,8 @@ jobs:
       name: documentation
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Build
+        run: pnpm run build:docs
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
