@@ -17,6 +17,7 @@ import SessionSchedule from './components/SessionSchedule.vue';
 import VideoLibrary from './components/VideoLibrary.vue';
 import WorkshopsPage from './components/WorkshopsPage.vue';
 import HackathonPrizes from './components/HackathonPrizes.vue';
+import HomePage from './components/HomePage.vue';
 
 export default {
   extends: DefaultTheme,
@@ -40,5 +41,6 @@ export default {
     app.component('VideoLibrary', VideoLibrary);
     app.component('WorkshopsPage', WorkshopsPage);
     app.component('HackathonPrizes', HackathonPrizes);
+    app.component('HomePage', HomePage);
   },
 } satisfies Theme;
