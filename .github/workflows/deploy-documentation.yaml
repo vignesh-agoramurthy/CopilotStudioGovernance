@@ -11,7 +11,7 @@ on:
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read # This is required for actions/checkout
-
+  pages: write
 jobs:
   # This job checks if the 'documentation' environment exists
   get-environments:
