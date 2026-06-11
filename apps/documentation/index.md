@@ -1,38 +1,46 @@
 ---
 lastUpdated: false
+layout: page
 ---
 
-# Copilot Studio Enablement
+<div class="orkes-home">
+  <div class="hero-section">
+    <h1 class="hero-title">Copilot Studio Enablement</h1>
+    <p class="hero-subtitle">Comprehensive resources for building, optimizing, and managing intelligent AI agents.</p>
+    <a href="/recruit/" class="cta-button">Get Started</a>
+  </div>
 
-**Welcome to Copilot Studio Enablement.**
+  <div class="sections-grid">
+    <div class="section-card">
+      <span class="section-icon">🎓</span>
+      <h3>Agent Academy</h3>
+      <p>Start your journey with our comprehensive training program. Learn the fundamentals of building AI agents from scratch with 13 hands-on modules designed to take you from beginner to agent maker.</p>
+      <a href="/recruit/" class="section-link">Explore Academy →</a>
+    </div>
 
-Comprehensive resources for learning, building, optimizing, and managing intelligent AI agents with Microsoft Copilot Studio.
+    <div class="section-card">
+      <span class="section-icon">⭐</span>
+      <h3>Best Practices</h3>
+      <p>Discover industry best practices, proven patterns, and expert recommendations for building efficient, secure, and scalable AI agents.</p>
+      <a href="/best-practices/" class="section-link">View Best Practices →</a>
+    </div>
 
-## 🎓 [Agent Academy](/recruit/)
+    <div class="section-card">
+      <span class="section-icon">📊</span>
+      <h3>Observability</h3>
+      <p>Monitor, analyze, and optimize your agents with comprehensive observability tools and guidance.</p>
+      <a href="/observability/" class="section-link">Explore Observability →</a>
+    </div>
+  </div>
 
-Start your journey with our comprehensive "Recruit" level training program. Learn the fundamentals of building AI agents from scratch with 13 hands-on modules designed to take you from beginner to agent maker.
+  <div class="footer-section">
+    <h3>Code of Conduct</h3>
+    <p>This project has adopted the <a href="https://opensource.microsoft.com/codeofconduct/">Microsoft Open Source Code of Conduct</a>.</p>
+  </div>
+</div>
 
-**Get Started**: [Explore Agent Academy →](/recruit/)
-
----
-
-## ⭐ [Best Practices](/best-practices/)
-
-Discover industry best practices, proven patterns, and expert recommendations for building efficient, secure, and scalable AI agents.
-
-**Explore**: [View Best Practices →](/best-practices/)
-
----
-
-## 📊 [Observability](/observability/)
-
-Monitor, analyze, and optimize your agents with comprehensive observability tools and guidance.
-
-**Learn More**: [Explore Observability →](/observability/)
-
----
-
-## 📜 Code of Conduct
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-
+<style scoped>
+.orkes-home {
+  padding: 0;
+}
+</style>
