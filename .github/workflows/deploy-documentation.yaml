@@ -46,46 +46,10 @@ jobs:
     name: Deploy Documentation
     needs: get-environments
     runs-on: ubuntu-latest
-
     environment:
       name: documentation
-      url: https://${{ env.FQDN }}
-
-    permissions:
-      id-token: write
-      contents: read
-
-    env:
-      AWS_ACCOUNT_ID: ${{ vars.AWS_ACCOUNT_ID }}
-      AWS_DEPLOYMENT_ROLE_NAME: ${{ vars.AWS_DEPLOYMENT_ROLE_NAME }}
-      AWS_REGION: ${{ vars.AWS_REGION }}
-      BUCKET_ALIAS: ${{ vars.BUCKET_ALIAS }}
-      FQDN: ${{ vars.FQDN }}
-      VITEPRESS_BASE: ${{ vars.VITEPRESS_BASE }}
-
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
-        name: Install pnpm
-
-      - name: Install Node.js
-        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
-        with:
-          node-version: 24
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build
-        run: pnpm run build:docs
-        env:
-          VITEPRESS_BASE: "/${{env.VITEPRESS_BASE}}/"
-
-      - name: Sync Site
-        run: aws s3 sync ./apps/documentation/.vitepress/dist ${{ env.BUCKET_ALIAS }} --delete --exclude "assets/*" --acl bucket-owner-full-control --cache-control public,max-age=0,s-maxage=5,must-revalidate
-
-      - name: Sync Assets
-        run: aws s3 sync ./apps/documentation/.vitepress/dist/assets ${{ env.BUCKET_ALIAS }}/assets --delete --acl bucket-owner-full-control --cache-control public,max-age=604800,immutable
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
