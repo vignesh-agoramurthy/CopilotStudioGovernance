@@ -1,10 +1,10 @@
 ---
 prev:
   text: Copilot Studio Fundamentals
-  link: ./02-copilot-studio-fundamentals
+  link: ../02-copilot-studio-fundamentals/
 next:
   text: Creating a Solution for Your Agent
-  link: ./04-creating-a-solution
+  link: ../04-creating-a-solution/
 short-description: 'Add your own agent to the Microsoft 365 Copilot, grounded in a prompt'
 difficulty: 1
 codename: OPERATION COPILOT EXTENSION

@@ -1,10 +1,10 @@
 ---
 prev:
   text: Course Setup
-  link: ./00-course-setup
+  link: ../00-course-setup/
 next:
   text: Copilot Studio Fundamentals
-  link: ../02-copilot-studio-fundamentals
+  link: ../02-copilot-studio-fundamentals/
 short-description: >-
   Understand conversational AI concepts, LLMs, and autonomous vs. declarative
   agents

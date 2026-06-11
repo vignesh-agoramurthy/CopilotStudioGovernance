@@ -1,10 +1,10 @@
 ---
 prev:
   text: Add Event Triggers
-  link: ./10-add-event-triggers
+  link: ../10-add-event-triggers/
 next:
   text: Course Completion
-  link: ./course-completion
+  link: ../course-completion/
 short-description: Deploy your agent to Microsoft Teams and Microsoft 365 Copilot
 difficulty: 1
 codename: OPERATION PUBLISH PUBLISH PUBLISH

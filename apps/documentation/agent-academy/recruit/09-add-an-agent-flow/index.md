@@ -1,10 +1,10 @@
 ---
 prev:
   text: Enhance user interactions in Topics with Adaptive Cards
-  link: ./08-add-adaptive-card
+  link: ../08-add-adaptive-card/
 next:
   text: Add Event Triggers
-  link: ./10-add-event-triggers
+  link: ../10-add-event-triggers/
 short-description: Use Adaptive Card input to trigger back-end flows
 difficulty: 1
 codename: OPERATION AUTOMATION POWERHOUSE

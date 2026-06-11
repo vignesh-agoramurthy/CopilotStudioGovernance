@@ -1,10 +1,10 @@
 ---
 prev:
   text: Deploy a Declarative Agent for Microsoft 365 Copilot
-  link: ./03-create-a-declarative-agent-for-M365Copilot
+  link: ../03-create-a-declarative-agent-for-M365Copilot/
 next:
   text: Using a Pre-Built Agent
-  link: ./05-using-prebuilt-agents
+  link: ../05-using-prebuilt-agents/
 short-description: Package your agent into a reusable solution for environment management
 difficulty: 1
 codename: OPERATION CTRL-ALT-PACKAGE
