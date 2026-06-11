@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+
+# Dist - build files
+dist
+
+# Editor settings
+.vscode/
+
+# Env files
+.env*
+!.env.*.example
+
+# Misc
+.DS_Store
+*.pem
+
+# VitePress build cache
+**/.vitepress/dist/
+**/.vitepress/cache/
+
+# TanStack build cache
+**/.tanstack

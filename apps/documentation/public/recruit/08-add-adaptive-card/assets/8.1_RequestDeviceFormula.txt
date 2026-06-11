@@ -1,0 +1,19 @@
+ForAll(
+    Global.VarDevices.value,
+    {
+        type: "Container",
+        items: [
+            {
+                type: "TextBlock",
+                text: If(IsBlank(ThisRecord.Model), "Unknown Model", ThisRecord.Model),
+                weight: "Bolder",
+                size: "Medium"
+            },
+            {
+                type: "TextBlock",
+                text: If(IsBlank(ThisRecord.Description), "No description provided", ThisRecord.Description),
+                wrap: true
+            }
+        ]
+    }
+)

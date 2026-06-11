@@ -1,0 +1,17 @@
+{
+    "name": "copilot-studio",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*"
+    ],
+    "scripts": {
+        "dev:docs": "pnpm --filter @copilot-studio/documentation run dev",
+        "build:docs": "pnpm --filter @copilot-studio/documentation run build"
+    },
+    "engines": {
+        "node": ">=24.0.0",
+        "pnpm": ">=10.9.0"
+    },
+    "packageManager": "pnpm@10.9.0"
+}
