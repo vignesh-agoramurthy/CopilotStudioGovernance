@@ -61,6 +61,10 @@ jobs:
 
       - name: Build
         run: pnpm run build:docs
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+            path: docs/.vitepress/dist
   deploy:
     name: Deploy Documentation
     needs: check
