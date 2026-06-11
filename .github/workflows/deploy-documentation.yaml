@@ -69,10 +69,8 @@ jobs:
       - name: Build
         run: pnpm run build:docs
   deploy:
-    # If there are no documentation environment to deploy to, this job will be skipped
-    if: ${{ needs.get-environments.outputs.names != '[]'}}
     name: Deploy Documentation
-    needs: CI
+    needs: check
     runs-on: ubuntu-latest
     environment:
       name: documentation
