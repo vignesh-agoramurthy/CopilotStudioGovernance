@@ -1,10 +1,10 @@
 ---
 prev:
   text: Add new topic with trigger and nodes
-  link: /recruit/07-add-new-topic-with-trigger
+  link: ./07-add-new-topic-with-trigger
 next:
   text: Add an agent flow to your Topic for automation
-  link: /recruit/09-add-an-agent-flow
+  link: ./09-add-an-agent-flow
 short-description: Build an Adaptive Card using Power Fx and SharePoint
 difficulty: 1
 codename: OPERATION INTERFACE UPLIFT

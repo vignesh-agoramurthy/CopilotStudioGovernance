@@ -1,10 +1,10 @@
 ---
 prev:
   text: Using a Pre-Built Agent
-  link: /recruit/05-using-prebuilt-agents
+  link: ./05-using-prebuilt-agents
 next:
   text: Add new topic with trigger and nodes
-  link: /recruit/07-add-new-topic-with-trigger
+  link: ./07-add-new-topic-with-trigger
 short-description: Create a new agent grounded in knowledge sources
 difficulty: 1
 codename: OPERATION AGENT FORGE

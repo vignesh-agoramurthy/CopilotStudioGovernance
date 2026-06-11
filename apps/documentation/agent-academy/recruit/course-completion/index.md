@@ -1,7 +1,7 @@
 ---
 prev:
   text: Publish your agent
-  link: /recruit/11-publish-your-agent
+  link: ./11-publish-your-agent
 short-description: Congratulations and what will you build now?
 difficulty: 1
 codename: OPERATION COURSE COMPLETION

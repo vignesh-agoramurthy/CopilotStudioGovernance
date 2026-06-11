@@ -1,10 +1,10 @@
 ---
 prev:
   text: Add an agent flow to your Topic for automation
-  link: /recruit/09-add-an-agent-flow
+  link: ./09-add-an-agent-flow
 next:
   text: Publish your agent
-  link: /recruit/11-publish-your-agent
+  link: ./11-publish-your-agent
 short-description: Enable your agent to act autonomously using event-based logic
 difficulty: 1
 codename: OPERATION GHOST ROUTINE

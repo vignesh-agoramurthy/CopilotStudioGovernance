@@ -1,7 +1,7 @@
 ---
 next:
   text: 'Course Setup'
-  link: '/recruit/00-course-setup'
+  link: './00-course-setup'
 lastUpdated: false
 ---
 

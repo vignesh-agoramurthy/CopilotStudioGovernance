@@ -1,10 +1,10 @@
 ---
 prev:
   text: Creating a Solution for Your Agent
-  link: /recruit/04-creating-a-solution
+  link: ./04-creating-a-solution
 next:
   text: Create a custom agent using natural language with AI
-  link: /recruit/06-create-agent-from-conversation
+  link: ./06-create-agent-from-conversation
 short-description: Use and customize a template agent to accelerate setup
 difficulty: 1
 codename: OPERATION SAFE TRAVELS

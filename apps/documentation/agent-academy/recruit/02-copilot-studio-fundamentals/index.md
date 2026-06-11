@@ -1,10 +1,10 @@
 ---
 prev:
   text: Introduction to Agents
-  link: /recruit/01-introduction-to-agents
+  link: ./01-introduction-to-agents
 next:
   text: Deploy a Declarative Agent for Microsoft 365 Copilot
-  link: /recruit/03-create-a-declarative-agent-for-M365Copilot
+  link: ./03-create-a-declarative-agent-for-M365Copilot
 short-description: 'Learn the building blocks: knowledge, skills, autonomy'
 difficulty: 1
 codename: OPERATION CORE PROTOCOL

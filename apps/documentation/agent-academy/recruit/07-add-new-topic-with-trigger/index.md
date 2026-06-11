@@ -1,10 +1,10 @@
 ---
 prev:
   text: Create a custom agent using natural language with AI
-  link: /recruit/06-create-agent-from-conversation
+  link: ./06-create-agent-from-conversation
 next:
   text: Enhance user interactions in Topics with Adaptive Cards
-  link: /recruit/08-add-adaptive-card
+  link: ./08-add-adaptive-card
 short-description: Use Topics to define custom question/answer paths
 difficulty: 1
 codename: OPERATION STAY ON TOPIC
