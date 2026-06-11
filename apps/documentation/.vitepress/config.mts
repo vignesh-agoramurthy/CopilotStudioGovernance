@@ -9,7 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const docsDir = path.resolve(__dirname, "..");
 
 export default defineConfig({
-  title: "Agent Academy",
+  title: "Copilot Studio Enablement",
   base: "/CopilotStudioGovernance/",
   cleanUrls: true,
   head: [
@@ -21,38 +21,52 @@ export default defineConfig({
     ],
   ],
   description:
-    "Welcome to Copilot Studio Agent Academy. Curated lessons on getting started building agents with Copilot Studio.",
+    "Copilot Studio Enablement - Comprehensive resources for building, optimizing, and managing AI agents with Microsoft Copilot Studio.",
   themeConfig: {
     logo: "/logo.png",
     nav: [
       { text: "Home", link: "/" },
-      { text: "Recruit", link: "/recruit/" },
+      { text: "Agent Academy", link: "/recruit/" },
+      { text: "Best Practices", link: "/best-practices/" },
+      { text: "Observability", link: "/observability/" },
     ],
     search: {
       provider: "local",
     },
     sidebar: [
-  { text: 'Home', link: '/' },
-  {
-    text: 'Recruit',
-    link: '/recruit/',
-    collapsed: true,
-    items: [
-      { text: 'Course Setup', link: '/recruit/00-course-setup/' },
-      { text: 'Introduction to Agents', link: '/recruit/01-introduction-to-agents/' },
-      { text: 'Copilot Studio Fundamentals', link: '/recruit/02-copilot-studio-fundamentals/' },
-      { text: 'Create A Declarative Agent For M365 Copilot', link: '/recruit/03-create-a-declarative-agent-for-M365Copilot/' },
-      { text: 'Creating A Solution', link: '/recruit/04-creating-a-solution/' },
-      { text: 'Using Prebuilt Agents', link: '/recruit/05-using-prebuilt-agents/' },
-      { text: 'Create Agent From Conversation', link: '/recruit/06-create-agent-from-conversation/' },
-      { text: 'Add New Topic With Trigger', link: '/recruit/07-add-new-topic-with-trigger/' },
-      { text: 'Add Adaptive Cards', link: '/recruit/08-add-adaptive-card/' },
-      { text: 'Add An Agent Flow', link: '/recruit/09-add-an-agent-flow/' },
-      { text: 'Add Event Triggers', link: '/recruit/10-add-event-triggers/' },
-      { text: 'Publish Your Agents', link: '/recruit/11-publish-your-agent/' },
-      { text: 'Course Completion', link: '/recruit/course-completion/' },
-    ],
-  },
+      { text: 'Home', link: '/' },
+      {
+        text: 'Agent Academy',
+        link: '/recruit/',
+        collapsed: true,
+        items: [
+          { text: 'Course Setup', link: '/recruit/00-course-setup/' },
+          { text: 'Introduction to Agents', link: '/recruit/01-introduction-to-agents/' },
+          { text: 'Copilot Studio Fundamentals', link: '/recruit/02-copilot-studio-fundamentals/' },
+          { text: 'Create A Declarative Agent For M365 Copilot', link: '/recruit/03-create-a-declarative-agent-for-M365Copilot/' },
+          { text: 'Creating A Solution', link: '/recruit/04-creating-a-solution/' },
+          { text: 'Using Prebuilt Agents', link: '/recruit/05-using-prebuilt-agents/' },
+          { text: 'Create Agent From Conversation', link: '/recruit/06-create-agent-from-conversation/' },
+          { text: 'Add New Topic With Trigger', link: '/recruit/07-add-new-topic-with-trigger/' },
+          { text: 'Add Adaptive Cards', link: '/recruit/08-add-adaptive-card/' },
+          { text: 'Add An Agent Flow', link: '/recruit/09-add-an-agent-flow/' },
+          { text: 'Add Event Triggers', link: '/recruit/10-add-event-triggers/' },
+          { text: 'Publish Your Agents', link: '/recruit/11-publish-your-agent/' },
+          { text: 'Course Completion', link: '/recruit/course-completion/' },
+        ],
+      },
+      {
+        text: 'Best Practices',
+        link: '/best-practices/',
+        collapsed: true,
+        items: [],
+      },
+      {
+        text: 'Observability',
+        link: '/observability/',
+        collapsed: true,
+        items: [],
+      },
     ],
     socialLinks: [
       {

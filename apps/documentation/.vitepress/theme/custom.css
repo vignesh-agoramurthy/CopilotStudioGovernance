@@ -5,6 +5,15 @@ html.dark .light-only {
 html:not(.dark) .dark-only {
   display: none !important;
 }
+
+/* Copilot Studio Color Palette */
+:root {
+  --cs-primary: #0078D4;
+  --cs-primary-dark: #106EBE;
+  --cs-accent: #50E6FF;
+  --cs-accent-dark: #00BCF2;
+}
+
 /* Speaker grid — used on events/live/index.md */
 .speaker-grid {
   display: grid;
@@ -57,3 +66,132 @@ html:not(.dark) .dark-only {
   margin: 0;
 }
 
+/* Home page styling with Copilot Studio branding */
+.VPContent.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 120, 212, 0.1) 0%, rgba(80, 230, 255, 0.05) 100%);
+  border-radius: 12px;
+  margin-bottom: 4rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 3.5rem);
+  font-weight: 700;
+  margin: 0 0 1rem;
+  background: linear-gradient(135deg, var(--cs-primary) 0%, var(--cs-primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  color: var(--vp-c-text-1);
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, var(--cs-primary) 0%, var(--cs-primary-dark) 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 24px;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(0, 120, 212, 0.3);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 120, 212, 0.4);
+}
+
+/* Sections Grid */
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.section-card {
+  padding: 2rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.section-card:hover {
+  border-color: var(--cs-primary);
+  box-shadow: 0 8px 24px rgba(0, 120, 212, 0.15);
+  transform: translateY(-4px);
+}
+
+.section-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-card h3 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  color: var(--vp-c-text-1);
+}
+
+.section-card p {
+  font-size: 0.95rem;
+  color: var(--vp-c-text-2);
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+.section-link {
+  display: inline-block;
+  color: var(--cs-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.section-link:hover {
+  color: var(--cs-primary-dark);
+}
+
+/* Footer Note */
+.footer-note {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--vp-c-divider);
+  margin-top: 4rem;
+  color: var(--vp-c-text-2);
+}
+
+.footer-note p {
+  margin: 0.5rem 0;
+}
+
+.footer-note a {
+  color: var(--cs-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-note a:hover {
+  color: var(--cs-primary-dark);
+  text-decoration: underline;
+}
