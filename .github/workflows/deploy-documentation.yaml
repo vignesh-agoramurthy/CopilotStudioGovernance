@@ -84,13 +84,6 @@ jobs:
         env:
           VITEPRESS_BASE: "/${{env.VITEPRESS_BASE}}/"
 
-      - name: Assume Deployment Role
-        uses: woodside/assume-deployment-role@e9734fd3d538b6e31a0a3b557b1d8d4128d76749 # v6.0.0
-        with:
-          deployment-role-name: ${{ env.AWS_DEPLOYMENT_ROLE_NAME }}
-          aws-account-id: ${{ env.AWS_ACCOUNT_ID }}
-          aws-region: ${{ env.AWS_REGION }}
-
       - name: Sync Site
         run: aws s3 sync ./apps/documentation/.vitepress/dist ${{ env.BUCKET_ALIAS }} --delete --exclude "assets/*" --acl bucket-owner-full-control --cache-control public,max-age=0,s-maxage=5,must-revalidate
 
