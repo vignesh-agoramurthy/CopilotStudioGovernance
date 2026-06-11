@@ -11,7 +11,7 @@ on:
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: read # This is required for actions/checkout
-
+  pages: write
 jobs:
   # This job checks if the 'documentation' environment exists
   get-environments:
@@ -39,36 +39,16 @@ jobs:
           echo "names=$names" >> $GITHUB_OUTPUT
         env:
           NAMES: ${{ toJson(fromJson(steps.get_env.outputs.data).environments.*.name) }}
-
-  deploy:
-    # If there are no documentation environment to deploy to, this job will be skipped
-    if: ${{ needs.get-environments.outputs.names != '[]'}}
-    name: Deploy Documentation
-    needs: get-environments
+  check:
+    name: CI
     runs-on: ubuntu-latest
-
-    environment:
-      name: documentation
-      url: https://${{ env.FQDN }}
-
-    permissions:
-      id-token: write
-      contents: read
-
-    env:
-      AWS_ACCOUNT_ID: ${{ vars.AWS_ACCOUNT_ID }}
-      AWS_DEPLOYMENT_ROLE_NAME: ${{ vars.AWS_DEPLOYMENT_ROLE_NAME }}
-      AWS_REGION: ${{ vars.AWS_REGION }}
-      BUCKET_ALIAS: ${{ vars.BUCKET_ALIAS }}
-      FQDN: ${{ vars.FQDN }}
-      VITEPRESS_BASE: ${{ vars.VITEPRESS_BASE }}
-
+    needs: get-environments
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
-        name: Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5.0.0
 
       - name: Install Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6.3.0
@@ -77,22 +57,22 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm run build:docs
-        env:
-          VITEPRESS_BASE: "/${{env.VITEPRESS_BASE}}/"
-
-      - name: Assume Deployment Role
-        uses: woodside/assume-deployment-role@e9734fd3d538b6e31a0a3b557b1d8d4128d76749 # v6.0.0
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          deployment-role-name: ${{ env.AWS_DEPLOYMENT_ROLE_NAME }}
-          aws-account-id: ${{ env.AWS_ACCOUNT_ID }}
-          aws-region: ${{ env.AWS_REGION }}
-
-      - name: Sync Site
-        run: aws s3 sync ./apps/documentation/.vitepress/dist ${{ env.BUCKET_ALIAS }} --delete --exclude "assets/*" --acl bucket-owner-full-control --cache-control public,max-age=0,s-maxage=5,must-revalidate
-
-      - name: Sync Assets
-        run: aws s3 sync ./apps/documentation/.vitepress/dist/assets ${{ env.BUCKET_ALIAS }}/assets --delete --acl bucket-owner-full-control --cache-control public,max-age=604800,immutable
+            path: apps/documentation/.vitepress/dist
+  deploy:
+    name: Deploy Documentation
+    needs: check
+    runs-on: ubuntu-latest
+    environment:
+      name: documentation
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
