@@ -260,3 +260,23 @@ html {
   color: var(--cs-accent);
   text-decoration: underline;
 }
+
+/* Full-width layout for home page */
+.VPPage:has(.orkes-home) {
+  padding: 0 !important;
+}
+
+.VPPage:has(.orkes-home) .VPContent {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.VPPage:has(.orkes-home) .VPDoc {
+  padding: 0 !important;
+}
+
+/* Ensure hero title is fully visible */
+.hero-title {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
