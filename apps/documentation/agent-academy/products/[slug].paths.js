@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default {
   paths() {
     const products = JSON.parse(
-      readFileSync(resolve(__dirname, "../.vitepress/data/products.json"), "utf-8")
+      readFileSync(resolve(__dirname, "../../.vitepress/data/products.json"), "utf-8")
     );
     return products.map((p) => ({ params: { slug: p.slug, label: p.label } }));
   },
