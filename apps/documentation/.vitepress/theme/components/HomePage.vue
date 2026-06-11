@@ -41,8 +41,9 @@
 
 <style scoped>
 .orkes-home {
-  background: linear-gradient(135deg, #1a1a1e 0%, #252529 100%);
+  background: linear-gradient(135deg, var(--vp-c-bg, #ffffff) 0%, var(--vp-c-bg-soft, #f5f5f5) 100%);
   padding: 0 1rem;
+  color: var(--vp-c-text-primary, #0f172a);
 }
 
 /* Hero Section */
@@ -56,7 +57,7 @@
   font-size: clamp(2.2rem, 8vw, 3.2rem);
   font-weight: 700;
   margin: 0 0 1.5rem;
-  background: linear-gradient(90deg, #7DCFFF 0%, #0078D4 50%, #50E6FF 100%);
+  background: linear-gradient(90deg, var(--vp-c-primary, #0078d4) 0%, var(--vp-c-primary, #0078d4) 50%, var(--vp-c-accent, #50e6ff) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -65,7 +66,7 @@
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #b0b0b0;
+  color: var(--vp-c-text-2, #6b7280);
   margin: 0 0 2.5rem;
   line-height: 1.6;
   max-width: 700px;
@@ -77,8 +78,8 @@
 .cta-button {
   display: inline-block;
   padding: 0.8rem 2.2rem;
-  background: linear-gradient(135deg, #0078D4 0%, #1084D9 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--vp-c-primary, #0078d4) 0%, var(--vp-c-primary-dark, #106ebe) 100%);
+  color: var(--vp-c-button-text, #ffffff);
   text-decoration: none;
   border-radius: 24px;
   font-weight: 600;
@@ -92,8 +93,8 @@
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 120, 212, 0.5);
-  background: linear-gradient(135deg, #1084D9 0%, #106EBE 100%);
+  box-shadow: 0 8px 24px rgba(0, 120, 212, 0.35);
+  background: linear-gradient(135deg, var(--vp-c-primary-dark, #106ebe) 0%, var(--vp-c-primary, #0078d4) 100%);
 }
 
 .cta-button:active {
@@ -114,9 +115,9 @@
 
 .section-card {
   padding: 2.5rem;
-  border: 1px solid #3e3e42;
+  border: 1px solid var(--vp-c-divider, #d1d5db);
   border-radius: 12px;
-  background: #2d2d31;
+  background: var(--vp-c-bg-soft, #f8fafc);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
@@ -130,16 +131,16 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #0078D4, transparent);
+  background: linear-gradient(90deg, transparent, var(--vp-c-primary, #0078d4), transparent);
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .section-card:hover {
-  border-color: #0078D4;
+  border-color: var(--vp-c-primary, #0078d4);
   box-shadow: 0 12px 32px rgba(0, 120, 212, 0.2);
   transform: translateY(-6px);
-  background: linear-gradient(135deg, #2d2d31 0%, #3a3a3f 100%);
+  background: var(--vp-c-surface, #ffffff);
 }
 
 .section-card:hover::before {
@@ -155,14 +156,14 @@
 .section-card h3 {
   font-size: 1.4rem;
   margin: 0 0 1rem;
-  color: #ffffff;
+  color: var(--vp-c-text-1, #111827);
   font-weight: 600;
   letter-spacing: -0.3px;
 }
 
 .section-card p {
   font-size: 0.95rem;
-  color: #b0b0b0;
+  color: var(--vp-c-text-2, #6b7280);
   margin: 0 0 1.5rem;
   line-height: 1.7;
   font-weight: 400;
@@ -170,7 +171,7 @@
 
 .section-link {
   display: inline-block;
-  color: #0078D4;
+  color: var(--vp-c-primary, #0078d4);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s;
@@ -179,7 +180,7 @@
 }
 
 .section-link:hover {
-  color: #50E6FF;
+  color: var(--vp-c-primary-dark, #106ebe);
   transform: translateX(4px);
 }
 
@@ -187,7 +188,7 @@
 .footer-section {
   text-align: center;
   padding: 3rem 2rem;
-  border-top: 1px solid #3e3e42;
+  border-top: 1px solid var(--vp-c-divider, #d1d5db);
   margin-top: 3rem;
   max-width: 1200px;
   margin-left: auto;
@@ -196,27 +197,27 @@
 
 .footer-section h3 {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: var(--vp-c-text-1, #111827);
   margin: 0 0 0.5rem;
   font-weight: 600;
 }
 
 .footer-section p {
-  color: #b0b0b0;
+  color: var(--vp-c-text-2, #6b7280);
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
 .footer-section a {
-  color: #0078D4;
+  color: var(--vp-c-primary, #0078d4);
   text-decoration: none;
   transition: color 0.2s;
   font-weight: 500;
 }
 
 .footer-section a:hover {
-  color: #50E6FF;
+  color: var(--vp-c-primary-dark, #106ebe);
   text-decoration: underline;
 }
 </style>
