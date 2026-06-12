@@ -1,5 +1,4 @@
 ---
-title: "Agent Tool Selection"
 next:
   text: 'What each one does'
   link: '/tool-selection/what-each-one-does'
