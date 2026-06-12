@@ -14,22 +14,28 @@
       </a>
 
       <a href="/CopilotStudioGovernance/best-practices/" class="section-card">
-        <span class="section-icon">⭐</span>
-        <h3>Best Practices</h3>
-        <p>Discover industry best practices, proven patterns, and expert recommendations for building efficient, secure, and scalable AI agents.</p>
+        <span class="section-icon">🧭</span>
+        <h3>Agent Tool Selection</h3>
+        <p>Compare agent frameworks and learn when to use each one, so you can choose the right foundation for your use case, integration needs, and governance requirements.</p>
       </a>
 
       <a href="/CopilotStudioGovernance/observability/" class="section-card">
         <span class="section-icon">📊</span>
-        <h3>Observability</h3>
-        <p>Monitor, analyze, and optimize your agents with comprehensive observability tools and guidance.</p>
-        <span class="section-link">Explore Observability →</span>
+        <h3>Observability Guide</h3>
+        <p>Monitor, analyze, and govern agents with comprehensive observability tools and guidance.</p>
       </a>
-    </div>
 
-    <div class="footer-section">
-      <h3>Code of Conduct</h3>
-      <p>This project has adopted the <a href="https://opensource.microsoft.com/codeofconduct/">Microsoft Open Source Code of Conduct</a>.</p>
+      <a href="/CopilotStudioGovernance/testing/" class="section-card">
+        <span class="section-icon">🧪</span>
+        <h3>Testing and Evaluation</h3>
+        <p>Learn how to evaluate agents in the Copilot Studio portal and run advanced testing with the Copilot Studio Kit.</p>
+      </a>
+
+      <a href="/CopilotStudioGovernance/best-practices/" class="section-card">
+        <span class="section-icon">⭐</span>
+        <h3>Best Practice</h3>
+        <p>Discover industry best practices, proven patterns, and expert recommendations for building efficient, secure, and scalable AI agents.</p>
+      </a>
     </div>
   </div>
 </template>
@@ -39,7 +45,7 @@
 
 <style scoped>
 .cs-home {
-  background: linear-gradient(135deg, var(--vp-c-bg, #ffffff) 0%, var(--vp-c-bg-soft, #f5f5f5) 100%);
+  background: var(--vp-c-bg, #ffffff);
   padding: 0 1rem;
   color: var(--vp-c-text-primary, #0f172a);
 }
@@ -47,7 +53,7 @@
 /* Hero Section */
 .hero-section {
   text-align: center;
-  padding: 12rem 4rem 8rem;
+  padding: 4rem 2rem 2rem;
   margin-bottom: 4rem;
 }
 
@@ -114,7 +120,7 @@
 
 .section-card {
   display: block;
-  padding: 2.5rem;
+  padding: 1rem;
   border: 1px solid var(--vp-c-divider, #d1d5db);
   border-radius: 12px;
   background: var(--vp-c-bg-soft, var(--vp-c-bg, #f8fafc));

@@ -13,7 +13,7 @@ export default defineConfig({
   base: "/CopilotStudioGovernance/",
   cleanUrls: true,
   head: [
-    ["link", { rel: "icon", href: "/logo.png" }],
+    ["link", { rel: "icon", href: "/agent-academy/images/copilot-studio.svg" }],
     [
       "script",
       { text: "text/javascript" },
@@ -23,12 +23,10 @@ export default defineConfig({
   description:
     "Copilot Studio Enablement - Comprehensive resources for building, optimizing, and managing AI agents with Microsoft Copilot Studio.",
   themeConfig: {
-    logo: "/logo.png",
+    logo: "/agent-academy/images/copilot-studio.svg",
     colorScheme: "auto",
     nav: [
-      { text: "Agent Academy", link: "/agent-academy/" },
-      { text: "Best Practices", link: "/best-practices/" },
-      { text: "Observability", link: "/observability/" },
+      { text: "Home", link: "/" }
     ],
     search: {
       provider: "local",
@@ -36,9 +34,13 @@ export default defineConfig({
     sidebar: {
       "/agent-academy/": [
         {
+          text: 'Agent Academy',
+          link: '/agent-academy/',
+        },
+        {
           text: 'Recruit',
           link: '/agent-academy/recruit/',
-          collapsed: true,
+          collapsed: false,
           items: [
             { text: 'Course Setup', link: '/agent-academy/recruit/00-course-setup/' },
             { text: 'Introduction to Agents', link: '/agent-academy/recruit/01-introduction-to-agents/' },
@@ -72,13 +74,7 @@ export default defineConfig({
           items: [],
         },
       ],
-    },
-    socialLinks: [
-      {
-        icon: "github",
-        link: "https://github.com/Woodside/CopilotStudioGovernance/",
-      },
-    ],
+    }
   },
   markdown: {
     config: (md) => {
