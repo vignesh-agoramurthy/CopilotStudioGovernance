@@ -86,7 +86,14 @@ export default defineConfig({
           text: 'Observability',
           link: '/observability/',
           collapsed: false,
-          items: [],
+          items: [
+            { text: 'Overview', link: '/observability/' },
+            { text: 'Usage Metrics', link: '/observability/1-usage-metrics' },
+            { text: 'Correct Usage Metrics', link: '/observability/2-correct-usage-metrics' },
+            { text: 'User Behaviour Metrics', link: '/observability/3-user-behaviour-metrics' },
+            { text: 'Compliance Metrics', link: '/observability/4-compliance-metrics' },
+            { text: 'Quick Reference Appendix', link: '/observability/updated-quick-reference-appendix' },
+          ],
         },
       ],
     }
