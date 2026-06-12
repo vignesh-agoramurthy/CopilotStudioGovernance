@@ -7,31 +7,31 @@
     </div>
 
     <div class="sections-grid">
-      <a href="/CopilotStudioGovernance/agent-academy/" class="section-card">
+      <a :href="withBase('/agent-academy/')" class="section-card">
         <span class="section-icon">🎓</span>
         <h3>Agent Academy</h3>
         <p>Start your journey with our comprehensive training program. Learn the fundamentals of building AI agents from scratch with 13 hands-on modules designed to take you from beginner to agent maker.</p>
       </a>
 
-      <a href="/CopilotStudioGovernance/tool-selection/" class="section-card">
+      <a :href="withBase('/tool-selection/')" class="section-card">
         <span class="section-icon">🧭</span>
         <h3>Agent Tool Selection</h3>
         <p>Compare agent frameworks and learn when to use each one, so you can choose the right foundation for your use case, integration needs, and governance requirements.</p>
       </a>
 
-      <a href="/CopilotStudioGovernance/observability/" class="section-card">
+      <a :href="withBase('/observability/')" class="section-card">
         <span class="section-icon">📊</span>
         <h3>Observability Guide</h3>
         <p>Monitor, analyze, and govern agents with comprehensive observability tools and guidance.</p>
       </a>
 
-      <a href="/CopilotStudioGovernance/testing/" class="section-card">
+      <a :href="withBase('/testing/')" class="section-card">
         <span class="section-icon">🧪</span>
         <h3>Testing and Evaluation</h3>
         <p>Learn how to evaluate agents in the Copilot Studio portal and run advanced testing with the Copilot Studio Kit.</p>
       </a>
 
-      <a href="/CopilotStudioGovernance/best-practices/" class="section-card">
+      <a :href="withBase('/best-practices/')" class="section-card">
         <span class="section-icon">⭐</span>
         <h3>Best Practice</h3>
         <p>Discover industry best practices, proven patterns, and expert recommendations for building efficient, secure, and scalable AI agents.</p>
@@ -41,6 +41,7 @@
 </template>
 
 <script setup lang="ts">
+import { withBase } from "vitepress";
 </script>
 
 <style scoped>

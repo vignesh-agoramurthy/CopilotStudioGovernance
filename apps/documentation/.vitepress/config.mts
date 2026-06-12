@@ -7,13 +7,22 @@ import { mermaidPlugin } from "./plugins/vitepress-mermaid";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const docsDir = path.resolve(__dirname, "..");
+const siteBase = normalizeBase(process.env.VITEPRESS_BASE ?? "/copilot-studio/");
+
+function normalizeBase(base: string) {
+  return `/${base.replace(/^\/+|\/+$/g, "")}/`;
+}
+
+function withBase(assetPath: string) {
+  return `${siteBase}${assetPath.replace(/^\/+/, "")}`;
+}
 
 export default defineConfig({
   title: "Copilot Studio Enablement",
-  base: "/CopilotStudioGovernance/",
+  base: siteBase,
   cleanUrls: true,
   head: [
-    ["link", { rel: "icon", href: "/agent-academy/images/copilot-studio.svg" }],
+    ["link", { rel: "icon", href: withBase("/agent-academy/images/copilot-studio.svg") }],
     [
       "script",
       { text: "text/javascript" },

@@ -2,7 +2,7 @@
     "name": "@CopilotStudioGovernance/documentation",
     "scripts": {
         "dev": "vitepress dev",
-        "build": "vitepress build"
+        "build": "vitepress build && node scripts/create-clean-url-aliases.mjs"
     },
     "devDependencies": {
         "@fluentui/svg-icons": "1.1.323",
