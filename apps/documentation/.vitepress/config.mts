@@ -24,6 +24,7 @@ export default defineConfig({
     "Copilot Studio Enablement - Comprehensive resources for building, optimizing, and managing AI agents with Microsoft Copilot Studio.",
   themeConfig: {
     logo: "/logo.png",
+    colorScheme: "auto",
     nav: [
       { text: "Agent Academy", link: "/agent-academy/" },
       { text: "Best Practices", link: "/best-practices/" },

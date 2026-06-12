@@ -1,24 +1,22 @@
 <template>
-  <div class="orkes-home">
+  <div class="cs-home">
     <div class="hero-section">
       <h1 class="hero-title">Copilot Studio Enablement</h1>
       <p class="hero-subtitle">Comprehensive resources for building, optimizing, and managing intelligent AI agents.</p>
-      <a href="/CopilotStudioGovernance/recruit/" class="cta-button">Get Started</a>
+      <a href="https://copilotstudio.microsoft.com/" class="cta-button">Get Started</a>
     </div>
 
     <div class="sections-grid">
-      <a href="/CopilotStudioGovernance/recruit/" class="section-card">
+      <a href="/CopilotStudioGovernance/agent-academy/" class="section-card">
         <span class="section-icon">🎓</span>
         <h3>Agent Academy</h3>
         <p>Start your journey with our comprehensive training program. Learn the fundamentals of building AI agents from scratch with 13 hands-on modules designed to take you from beginner to agent maker.</p>
-        <span class="section-link">Explore Academy →</span>
       </a>
 
       <a href="/CopilotStudioGovernance/best-practices/" class="section-card">
         <span class="section-icon">⭐</span>
         <h3>Best Practices</h3>
         <p>Discover industry best practices, proven patterns, and expert recommendations for building efficient, secure, and scalable AI agents.</p>
-        <span class="section-link">View Best Practices →</span>
       </a>
 
       <a href="/CopilotStudioGovernance/observability/" class="section-card">
@@ -40,7 +38,7 @@
 </script>
 
 <style scoped>
-.orkes-home {
+.cs-home {
   background: linear-gradient(135deg, var(--vp-c-bg, #ffffff) 0%, var(--vp-c-bg-soft, #f5f5f5) 100%);
   padding: 0 1rem;
   color: var(--vp-c-text-primary, #0f172a);
@@ -49,7 +47,7 @@
 /* Hero Section */
 .hero-section {
   text-align: center;
-  padding: 6rem 2rem 4rem;
+  padding: 12rem 4rem 8rem;
   margin-bottom: 4rem;
 }
 
@@ -57,6 +55,7 @@
   font-size: clamp(2.2rem, 8vw, 3.2rem);
   font-weight: 700;
   margin: 0 0 1.5rem;
+  line-height: 45px;
   background: linear-gradient(90deg, var(--vp-c-primary, #0078d4) 0%, var(--vp-c-primary, #0078d4) 50%, var(--vp-c-accent, #50e6ff) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -119,12 +118,12 @@
   border: 1px solid var(--vp-c-divider, #d1d5db);
   border-radius: 12px;
   background: var(--vp-c-bg-soft, var(--vp-c-bg, #f8fafc));
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0.4, 0.2, 1);
   cursor: pointer;
   position: relative;
-  overflow: hidden;
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
 }
 
 .section-card::before {
@@ -133,8 +132,14 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--vp-c-primary, #0078d4), transparent);
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 120, 212, 0),
+    var(--vp-c-primary, #0078d4) 30%,
+    var(--vp-c-accent, #50e6ff) 70%,
+    rgba(0, 120, 212, 0)
+  );
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -146,13 +151,13 @@
   background: var(--vp-c-bg-soft, var(--vp-c-bg, #f8fafc));
 }
 
+.section-card:hover::before {
+  opacity: 1;
+}
+
 .section-card:focus-visible {
   outline: 2px solid var(--vp-c-primary, #0078d4);
   outline-offset: 4px;
-}
-
-.section-card:hover::before {
-  opacity: 1;
 }
 
 .section-icon {
