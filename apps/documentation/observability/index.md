@@ -1,5 +1,4 @@
 ---
-title: "Overview"
 next:
   text: 'Usage Metrics'
   link: '/observability/1-usage-metrics'
@@ -11,17 +10,17 @@ This guide helps Copilot Studio users and administrators understand where to sou
 
 It is intended to support consistent reporting across business areas by clearly explaining:
 
--   What each metric means
--   Where the data can be found
--   Which platform or dashboard should be used
--   Any known limitations
--   Whether additional configuration or custom reporting may be required
+- What each metric means
+- Where the data can be found
+- Which platform or dashboard should be used
+- Any known limitations
+- Whether additional configuration or custom reporting may be required
 
 This guide is designed as a high-level, fit-for-purpose reference to support metric understanding and navigation, rather than a detailed technical guide. The guide consolidates metric definitions, data source guidance, and walkthrough steps into a single reference and is based on the Copilot Studio metrics and data source information provided.
 
 Screenshots are included under the relevant metric where a standard navigation path exists, to support users in locating the data source or interpreting the report. Where screenshots are not provided, this indicates that a consistent or out-of-the-box navigation path may not be available, and additional configuration or custom implementation may be required.
 
-## Role Definition and System Access 
+## Role Definition and System Access
 
 A role-based access model has been defined to clearly delineate responsibilities across business, technical, and governance functions. This model aligns access to Microsoft 365, Power Platform, and Copilot Studio capabilities based on each role's responsibilities.
 
@@ -32,55 +31,55 @@ The following table outlines each role, its primary responsibilities, the system
 A business user who designs, builds, and maintains Copilot Studio agents for personal productivity or team-level use cases, using out-of-the-box capabilities and is accountable for the quality, accuracy, and ongoing maintenance of their agents.\
 **Systems Access:**
 
--   Copilot Studio Analytics
+- Copilot Studio Analytics
 
 ### Agent maker (Pro Developer)
 
 A technically skilled user who builds advanced Copilot Studio agents, aligned to organisational architecture, governance, and application lifecycle management practices.\
 **Systems Access:**
 
--   Copilot Studio Kit
--   Copilot Studio Analytics
--   Azure Application Insights
+- Copilot Studio Kit
+- Copilot Studio Analytics
+- Azure Application Insights
 
 ### Business Leader
 
 A senior stakeholder responsible for defining use cases, driving adoption, evaluating the business value and productivity impact of Copilot Studio, and agent usage.\
 **Systems Access:**
 
--   Microsoft Viva Insights
+- Microsoft Viva Insights
 
 ### Power Platform (PP) Team
 
 The platform engineering team responsible for configuring and managing the Power Platform environments that underpin Copilot Studio, including environment strategy, controls, and scalability.\
 **Systems Access:**
 
--   Power Platform Admin Centre
--   Copilot Studio Kit
+- Power Platform Admin Centre
+- Copilot Studio Kit
 
 ### Cybersecurity (including Audit)
 
 The function responsible for ensuring Copilot Studio usage meets security, compliance, and audit requirements, including monitoring risks, enforcing controls, and supporting audit activities.\
 **Systems Access:**
 
--   Copilot Studio Kit
--   Microsoft 365 Admin Centre
+- Copilot Studio Kit
+- Microsoft 365 Admin Centre
 
 ### AI Team / Administrator (Responsible AI)
 
 A governance function responsible for ensuring Copilot Studio agents adhere to Responsible AI principles, including appropriate use, risk management, and compliance with organisational policies.\
 **Systems Access:**
 
--   Copilot Studio Kit
--   Microsoft 365 Admin Centre
+- Copilot Studio Kit
+- Microsoft 365 Admin Centre
 
 ### AI Team / Administrator (AI Team)
 
 The central function responsible for setting strategy, defining standards, and providing governance direction for Copilot Studio adoption across the enterprise.\
 **Systems Access:**
 
--   Copilot Studio Kit
--   Microsoft 365 Admin Centre
+- Copilot Studio Kit
+- Microsoft 365 Admin Centre
 
 ## Systems, Summary and Link
 
@@ -141,10 +140,10 @@ The following systems may be required to access the metrics described in this gu
 
 Access requirements vary by metric. Depending on the data source, users may require one or more of the following roles:
 
--   Power Platform Administrator
--   Access to Copilot Studio Kit
--   Access to relevant Power BI reports or Dataverse tables
--   Access to Entra ID security groups
+- Power Platform Administrator
+- Access to Copilot Studio Kit
+- Access to relevant Power BI reports or Dataverse tables
+- Access to Entra ID security groups
 
 Where a metric depends on Microsoft 365 Admin Centre reporting, users may require Global Reader or AI Administrator access.
 
@@ -183,20 +182,20 @@ Not all metrics are available out of the box.
 
 Some metrics require:
 
--   Custom dashboards
--   Scheduled exports
--   RPA-based extraction
--   Agent-level configuration
--   Consistent environment naming or ownership rules
--   Use of Copilot Studio Kit
--   Additional reporting logic in Power BI or Dataverse
+- Custom dashboards
+- Scheduled exports
+- RPA-based extraction
+- Agent-level configuration
+- Consistent environment naming or ownership rules
+- Use of Copilot Studio Kit
+- Additional reporting logic in Power BI or Dataverse
 
 Some Microsoft 365 Admin Centre reports may also have limitations, such as:
 
--   Displaying only the most recent 30 days
--   Showing only the top 10 agents
--   Limiting reports to 100 rows
--   Requiring Agent 365 before some reports are unlocked
+- Displaying only the most recent 30 days
+- Showing only the top 10 agents
+- Limiting reports to 100 rows
+- Requiring Agent 365 before some reports are unlocked
 
 These limitations should be considered before using the data for executive reporting or enterprise-wide adoption analysis.
 
