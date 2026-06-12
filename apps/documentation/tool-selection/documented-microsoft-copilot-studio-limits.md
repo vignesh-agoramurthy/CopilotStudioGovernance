@@ -1,5 +1,11 @@
 ---
 title: "Documented Microsoft Copilot Studio limits"
+prev:
+  text: 'When to pick what'
+  link: '/tool-selection/when-to-pick-what'
+next:
+  text: 'Overview'
+  link: '/tool-selection/'
 ---
 
 # Documented Microsoft Copilot Studio limits

@@ -1,5 +1,11 @@
 ---
 title: "When to pick what"
+prev:
+  text: 'Worked Example'
+  link: '/tool-selection/worked-example'
+next:
+  text: Documented limits
+  link: '/tool-selection/documented-microsoft-copilot-studio-limits'
 ---
 
 # When to pick what

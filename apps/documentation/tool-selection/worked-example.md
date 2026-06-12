@@ -1,5 +1,11 @@
 ---
 title: "Worked example - finance use cases across the three tools"
+prev:
+  text: 'What each one does'
+  link: '/tool-selection/what-each-one-does'
+next:
+  text: 'When to pick what'
+  link: '/tool-selection/when-to-pick-what'
 ---
 
 # Worked example - finance use cases across the three tools

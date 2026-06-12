@@ -1,5 +1,11 @@
 ---
 title: "What each one does"
+prev:
+  text: Overview
+  link: '/tool-selection/'
+next:
+  text: Worked Example
+  link: '/tool-selection/worked-example'
 ---
 
 # What each one does
