@@ -1,5 +1,4 @@
 ---
-title: "What each one does"
 prev:
   text: Overview
   link: '/tool-selection/'

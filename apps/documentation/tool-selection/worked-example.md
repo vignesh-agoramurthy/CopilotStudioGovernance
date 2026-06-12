@@ -1,5 +1,4 @@
 ---
-title: "Worked example - finance use cases across the three tools"
 prev:
   text: 'What each one does'
   link: '/tool-selection/what-each-one-does'

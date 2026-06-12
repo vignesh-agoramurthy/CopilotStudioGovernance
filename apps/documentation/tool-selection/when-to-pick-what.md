@@ -1,5 +1,4 @@
 ---
-title: "When to pick what"
 prev:
   text: 'Worked Example'
   link: '/tool-selection/worked-example'
