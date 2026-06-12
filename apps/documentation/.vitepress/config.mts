@@ -42,6 +42,7 @@ export default defineConfig({
           link: '/agent-academy/recruit/',
           collapsed: false,
           items: [
+            { text: 'Overview', link: '/agent-academy/recruit/' },
             { text: 'Course Setup', link: '/agent-academy/recruit/00-course-setup/' },
             { text: 'Introduction to Agents', link: '/agent-academy/recruit/01-introduction-to-agents/' },
             { text: 'Copilot Studio Fundamentals', link: '/agent-academy/recruit/02-copilot-studio-fundamentals/' },
@@ -55,6 +56,20 @@ export default defineConfig({
             { text: 'Add Event Triggers', link: '/agent-academy/recruit/10-add-event-triggers/' },
             { text: 'Publish Your Agents', link: '/agent-academy/recruit/11-publish-your-agent/' },
             { text: 'Course Completion', link: '/agent-academy/recruit/course-completion/' },
+          ],
+        },
+      ],
+      "/tool-selection/": [
+        {
+          text: 'Agent Tool Selection',
+          link: '/tool-selection/',
+          collapsed: false,
+          items: [
+            { text: 'Overview', link: '/tool-selection/' },
+            { text: 'What each one does', link: '/tool-selection/what-each-one-does/' },
+            { text: 'Worked example', link: '/tool-selection/worked-example/' },
+            { text: 'When to pick what', link: '/tool-selection/when-to-pick-what/' },
+            { text: 'Documented limits', link: '/tool-selection/documented-microsoft-copilot-studio-limits/' },
           ],
         },
       ],
